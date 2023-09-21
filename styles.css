@@ -31,6 +31,14 @@ p {
     position: absolute;
     animation: rotateAnimation 5s linear ;
 }
+.music{
+    height: 80px;
+    width: 180px;
+    top: 62%;
+    left: 40%;
+   position: absolute;
+    
+}
 
 
 .animate {
