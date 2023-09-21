@@ -1,0 +1,70 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #87CEEB; /* Color de fondo */
+}
+
+.flower {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.center {
+    width: 40px; /* Ancho del centro de la flor */
+    height: 40px; /* Altura del centro de la flor */
+    background-color: #FFD700; /* Color amarillo */
+    border-radius: 50%;
+    position: relative;
+}
+
+.circle {
+    width: 20px; /* Diámetro del círculo amarillo */
+    height: 20px;
+    background-color: #FFD700; /* Color amarillo */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.petal {
+    width: 20px; /* Ancho de cada pétalo */
+    height: 60px; /* Altura de cada pétalo */
+    background-color: #FFD700; /* Color amarillo */
+    border-radius: 50%;
+    position: absolute;
+    top: -20%;
+    left: 30%;
+   
+}
+
+.petal:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.petal:nth-child(3) {
+    transform: rotate(90deg);
+}
+
+.petal:nth-child(4) {
+    transform: rotate(135deg);
+}
+
+.petal:nth-child(5) {
+    transform: rotate(180deg);
+}
+
+
+
+.stem {
+    width: 10px; /* Ancho del tallo */
+    height: 100px; /* Altura del tallo */
+    background-color: green; /* Color del tallo */
+    margin-top: 0px;
+}
