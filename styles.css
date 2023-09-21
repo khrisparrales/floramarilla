@@ -1,3 +1,54 @@
+@font-face {
+    font-family: 'AlphaClouds'; /* Nombre de la fuente personalizada */
+    src: url('AlphaClouds.ttf') format('truetype'); /* Ruta al archivo TTF */
+    font-weight: normal;
+    font-style: normal;
+}
+p {
+    font-family: 'AlphaClouds', sans-serif;
+    font-size: 50px;
+    color: #fff;
+    position: static; /* Cambiar a 'static' para que no afecte la posición de las flores */
+}
+
+
+@keyframes rotateAnimation {
+    from {
+       left: 10%; /* Cambia de 0deg a 360deg */
+    }
+    to {
+       left: 90%; /* Cambia de 360deg a 0deg */
+    }
+}
+
+.avion {
+    transform: scaleX(-1);
+   
+    height: 80px;
+    width: 80px;
+    top: 25%;
+    left: 93%;
+    position: absolute;
+    animation: rotateAnimation 5s linear ;
+}
+
+
+.animate {
+    animation: typing 5s steps(40) forwards;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #333; /* Cursor de escritura */
+    font-size: 44px;
+}
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -7,11 +58,19 @@ body {
     background-color: #87CEEB; /* Color de fondo */
 }
 
+.field {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
 .flower {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
+    margin: 10px; /* Espacio entre las flores */
 }
 
 .center {
@@ -20,6 +79,7 @@ body {
     background-color: #FFD700; /* Color amarillo */
     border-radius: 50%;
     position: relative;
+    margin-top: -20px;
 }
 
 .circle {
@@ -41,7 +101,6 @@ body {
     position: absolute;
     top: -20%;
     left: 30%;
-   
 }
 
 .petal:nth-child(2) {
@@ -60,7 +119,17 @@ body {
     transform: rotate(180deg);
 }
 
+.petal:nth-child(6) {
+    transform: rotate(225deg);
+}
 
+.petal:nth-child(7) {
+    transform: rotate(270deg);
+}
+
+.petal:nth-child(8) {
+    transform: rotate(315deg);
+}
 
 .stem {
     width: 10px; /* Ancho del tallo */
